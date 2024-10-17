@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boné Oficial - Renasce Vôlei Sorocaba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #f4dd31;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #000000;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            background-color: #f4dd31;
+        }
+
+        .nav .cart-icon {
+            background: url('cart-icon.png') no-repeat center;
+            background-size: contain;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .product-container {
+            width: 80%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .product-image {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-details {
+            flex: 2;
+            max-width: 600px;
+        }
+
+        .product-details h1 {
+            font-size: 2em;
+            margin: 0 0 10px 0;
+        }
+
+        .product-details p {
+            color: #666;
+            margin: 0 0 10px 0;
+        }
+
+        .product-details .price {
+            color: #f4dd31;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .product-details .size-selection {
+            margin: 20px 0;
+        }
+
+        .product-details .size-selection label {
+            font-weight: bold;
+        }
+
+        .product-details select {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+
+        .product-details button {
+            background-color: #00509e;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+        }
+
+        .product-details button:hover {
+            background-color: #003366;
+        }
+
+        .product-details .description {
+            margin-top: 20px;
+        }
+
+        .confirmation-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            margin-top: 20px;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+        function addToCart() {
+            document.getElementById('confirmation-message').style.display = 'block';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="carrinho.html" class="cart-icon" title="Ver Carrinho"></a>
+        <img src="logo_renasce.jpeg" alt="Logo do Clube">
+        <h1>Boné Oficial - Renasce Vôlei Sorocaba</h1>
+    </div>
+    <div class="nav">
+        <a href="index.html">Início</a>
+        <a href="calendario.html">Calendário</a>
+        <a href="ingressos.html">Ingressos</a>
+        <a href="clube.html">Clube</a>
+        <a href="loja.html">Loja</a>
+        <a href="carrinho.html" class="cart-icon"></a>
+    </div>
+    <div class="content">
+        <div class="product-container">
+            <div class="product-image">
+                <img src="bone_renasce.jpeg" alt="Boné Oficial">
+            </div>
+            <div class="product-details">
+                <h1>Boné Oficial</h1>
+                <p class="price">R$ 59,90</p>
+                <button onclick="addToCart()">Adicionar ao Carrinho</button>
+                <div id="confirmation-message" class="confirmation-message">
+                    O item foi adicionado ao carrinho!
+                </div>
+                <div class="description">
+                    <p>O boné oficial do Renasce Vôlei Sorocaba é o acessório perfeito para complementar seu visual.
+                        Feito com material resistente e confortável. Tamanho único.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingressos - Renasce Vôlei Sorocaba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f4dd31;
+            color: white;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .icon-renasce {
+            display: inline-block;
+            margin: 0 20px; /* Espaço entre o logo e os ícones */
+        }
+
+        .icon-renasce img {
+            width: 150px; /* Ajuste o tamanho do logo do Renasce */
+            height: auto;
+        }
+
+        .cart-icon, .login-icon {
+            position: absolute;
+            top: 20px;
+            background-size: contain;
+            display: inline-block;
+            border-radius: 50%;
+            width: 40px; /* Ajuste o tamanho dos ícones */
+            height: 40px;
+            background-repeat: no-repeat;
+        }
+
+        .cart-icon {
+            left: 1475px; 
+        }
+
+        .login-icon {
+            left: 1435px; 
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #000000;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            background-color: #f4dd31;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tabs button {
+            background-color: #00509e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .tabs button:hover {
+            background-color: #003366;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .ticket {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: white;
+            position: relative;
+        }
+
+        .ticket h3 {
+            margin: 10px 0;
+        }
+
+        .ticket p {
+            color: #666;
+        }
+
+        .ticket button.delete {
+            background-color: #ff3333;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .ticket button.delete:hover {
+            background-color: #cc0000;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.2s;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+        }
+
+        .card p {
+            margin: 5px 0;
+        }
+
+        .date {
+            font-weight: bold;
+            color: #FF5733;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: 90%;
+            }
+
+            .cart-icon, .login-icon {
+                left: 10px;
+            }
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #f4dd31;
+            max-width: 300px;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.3em;
+        }
+
+        .product p {
+            color: #333;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .product .price {
+            color: black;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .product button {
+            background-color: #00509e;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .product button:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="Login.html" class="login-icon" title="Login"><img src="./IMAGENS/icon.png" alt="Login"></a>
+        <a href="carrinho.html" class="cart-icon" title="Ver Carrinho"><img src="./IMAGENS/carrinho.png" alt="Carrinho"></a>
+        <a href="index.html" class="icon-renasce"><img src="IMAGENS/logo_renasce.jpeg" alt="Logo do Clube"></a>
+        <h1>Renasce Vôlei Sorocaba</h1> 
+    </div>
+    <div class="nav">
+        <a href="index.html">Início</a>
+        <a href="loja.html">Loja</a>
+        <a href="calendario.html">Calendário</a>
+        <a href="clube.html">Clube</a>
+    </div>
+    <div class="content">
+    <h2>Ingressos de Jogos</h2>
+
+    <div class="container">
+        <div class="product">
+            <a href="carrinho.html" class="card">
+                <img src="./IMAGENS/tamplate_barueri.png" alt="Camiseta Oficial">
+                <h3>Renasce Sorocaba x Epson Barueri</h3>
+                <p class="date">Data: 30/09/2024</p>
+                <p>Local: SESI SOROCABA</p>
+                <p>Hora: 16:00</p>
+                <button onclick="reserveTicket('Renasce Sorocaba x Epson Barueri')">Adicionar ao Carrinho</button>
+
+            </a>
+        </div>
+
+        <div class="product">
+            <a href="carrinho.html" class="card">
+                <img src="./IMAGENS/tamplate_bauru.png" alt="Camiseta Oficial">
+                <h3>Renasce Sorocaba x SESI Bauru</h3>
+                <p class="date">Data: 10/10/2024</p>
+                <p>Local: SESI SOROCABA</p>
+                <p>Hora: 20:00</p>
+                <button onclick="reserveTicket('Renasce Sorocaba x SESI Bauru')">Adicionar ao Carrinho</button>
+
+            </a>
+        </div>
+
+        <div class="product">
+            <a href="carrinho.html" class="card">
+                <img src="./IMAGENS/tamplate_osasco.png" alt="Camiseta Oficial">
+                <h3>Renasce Sorocaba x Osasco</h3>
+                <p class="date">Data: 15/10/2024</p>
+                <p>Local: SESI SOROCABA</p>
+                <p>Hora: 14:30</p>
+                <button onclick="reserveTicket('Renasce Sorocaba x Osasco')">Adicionar ao Carrinho</button>
+
+            </a>
+        </div>
+        <!-- Adicione mais cards conforme necessário -->
+    </div>
+</div>
+</div>
+<script>
+    function reserveTicket(game) {
+        const reservations = JSON.parse(localStorage.getItem('reservations')) || [];
+        reservations.push(game);
+        localStorage.setItem('reservations', JSON.stringify(reservations));
+        alert("Você reservou um ingresso para " + game);
+        // Redirecionar para a página do carrinho
+        window.location.href = "carrinho.html";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja - Renasce Vôlei Sorocaba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f4dd31;
+            color: white;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .icon-renasce {
+            display: inline-block;
+            margin: 0 20px; /* Espaço entre o logo e os ícones */
+        }
+
+        .icon-renasce img {
+            width: 150px; /* Ajuste o tamanho do logo do Renasce */
+            height: auto;
+        }
+
+        .cart-icon, .login-icon {
+            position: absolute;
+            top: 20px;
+            background-size: contain;
+            display: inline-block;
+            border-radius: 50%;
+            width: 40px; /* Ajuste o tamanho dos ícones */
+            height: 40px;
+            background-repeat: no-repeat;
+        }
+
+        .cart-icon {
+            left: 1475px; 
+        }
+
+        .login-icon {
+            left: 1435px; 
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #000000;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            background-color: #f4dd31;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .product {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #f4dd31;
+            display: inline-block;
+            max-width: 300px;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.3em;
+        }
+
+        .product p {
+            color: #333;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .product .price {
+            color: black;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .product button {
+            background-color: #00509e;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .product button:hover {
+            background-color: #003366;
+        }
+
+        .filter {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .filter select {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="Login.html" class="login-icon" title="Login"><img src="./IMAGENS/icon.png" alt="Login"></a>
+        <a href="carrinho.html" class="cart-icon" title="Ver Carrinho"><img src="./IMAGENS/carrinho.png" alt="Carrinho"></a>
+        <a href="index.html" class="icon-renasce"><img src="IMAGENS/logo_renasce.jpeg" alt="Logo do Clube"></a>
+        <h1>Loja - Renasce Vôlei Sorocaba</h1>
+    </div>
+    <div class="nav">
+        <a href="index.html">Início</a>
+        <a href="calendario.html">Calendário</a>
+        <a href="ingressos.html">Ingressos</a>
+        <a href="clube.html">Clube</a>
+    </div>
+    <div class="product-container">
+        <div class="product">
+            <img src="./IMAGENS/camisa_renasce.jpeg" alt="Camiseta Oficial">
+            <h3>Camiseta Oficial</h3>
+            <p>A camiseta oficial do Renasce Vôlei Sorocaba.</p>
+            <p class="price">R$ 99,90</p>
+            <a href="camiseta.html"><button>Comprar</button></a>
+        </div>
+        <div class="product">
+            <img src="./IMAGENS/bandeira.jpeg" alt="Bandeira Oficial">
+            <h3>Bandeira Oficial</h3>
+            <p>A Bandeira oficial do Renasce Vôlei Sorocaba.</p>
+            <p class="price">R$ 39,90</p>
+            <a href="bandeira.html"><button>Comprar</button></a>
+        </div>
+        <div class="product">
+            <img src="./IMAGENS/_MG_0099 (1).jpg" alt="">
+            <h3>Socio Torcedor</h3>
+            <p>Clique aqui para se inscrever no socio Torcedor.</p>
+            <p class="price">R$ 49,90</p>
+            <a href="bone.html"><button>Inscreva-se</button></a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta - Renasce Vôlei Sorocaba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("./IMAGENS/RENASCE_EQUIPE.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .register-container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            color: white;
+        }
+
+        .register-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .register-container input {
+            width: 93%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #f4dd31;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .register-container button:hover {
+            background-color: #e2c52b;
+        }
+
+        .register-container a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .register-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-container">
+        <h2>Criar Conta</h2>
+        <form id="registerForm">
+            <input type="text" id="fullName" placeholder="Nome Completo" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="cpf" placeholder="CPF" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <input type="password" id="confirmPassword" placeholder="Confirme a Senha" required>
+            <button type="submit">Criar Conta</button>
+        </form>
+        <a href="login.html">Já tem uma conta? Faça login</a>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Coleta dos valores do formulário
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Valida se as senhas correspondem
+            if (password !== confirmPassword) {
+                alert('As senhas não coincidem.');
+                return;
+            }
+
+            // Simulação de criação de conta
+            alert('Conta criada com sucesso!');
+            window.location.href = 'login.html'; // Redireciona para a página de login
+        });
+    </script>
+</body>
+
+</html>

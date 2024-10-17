@@ -1,0 +1,41 @@
+.header {
+    background-color: #f4dd31;
+    color: white;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.icon-renasce {
+    display: inline-block;
+    margin: 0 20px; /* Espaço entre o logo e os ícones */
+}
+
+.icon-renasce img {
+    width: 150px; /* Ajuste o tamanho do logo do Renasce */
+    height: auto;
+}
+
+.cart-icon, .login-icon {
+    position: absolute;
+    top: 20px;
+    background-size: contain;
+    display: inline-block;
+    border-radius: 50%;
+    width: 40px; /* Ajuste o tamanho dos ícones */
+    height: 40px;
+    background-repeat: no-repeat;
+}
+
+.cart-icon {
+    left: 1475px; 
+}
+
+.login-icon {
+    left: 1435px; 
+}
+
+img {
+    width: 100%;
+    height: auto;
+}

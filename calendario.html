@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário - Renasce Vôlei Sorocaba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .header {
+            background-color: #f4dd31;
+            color: white;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .icon-renasce {
+            display: inline-block;
+            margin: 0 20px; /* Espaço entre o logo e os ícones */
+        }
+
+        .icon-renasce img {
+            width: 150px; /* Ajuste o tamanho do logo do Renasce */
+            height: auto;
+        }
+
+        .cart-icon, .login-icon {
+            position: absolute;
+            top: 20px;
+            background-size: contain;
+            display: inline-block;
+            border-radius: 50%;
+            width: 40px; /* Ajuste o tamanho dos ícones */
+            height: 40px;
+            background-repeat: no-repeat;
+        }
+
+        .cart-icon {
+            left: 1475px; 
+        }
+
+        .login-icon {
+            left: 1435px; 
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #000000;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            background-color: #f4dd31;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .game {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        .game h3 {
+            margin: 10px 0;
+        }
+
+        .game p {
+            color: #666;
+        }
+
+        .game button {
+            background-color: #00509e;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .game button:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="Login.html" class="login-icon" title="Login"><img src="./IMAGENS/icon.png" alt="Login"></a>
+        <a href="carrinho.html" class="cart-icon" title="Ver Carrinho"><img src="./IMAGENS/carrinho.png" alt="Carrinho"></a>
+        <a href="index.html" class="icon-renasce"><img src="IMAGENS/logo_renasce.jpeg" alt="Logo do Clube"></a>
+        <h1>Renasce Vôlei Sorocaba</h1>
+    </div>
+    <div class="nav">
+        <a href="index.html">Início</a>
+        <a href="loja.html">Loja</a>
+        <a href="ingressos.html">Ingressos</a>
+        <a href="clube.html">Clube</a>
+    </div>
+    <div class="content">
+        <h2>Próximos Jogos</h2>
+        <div class="game">
+            <h3>Renasce Vôlei Sorocaba vs. Time A</h3>
+            <p>Data: 10 de Agosto, 2024</p>
+            <p>Local: Arena Sorocaba</p>
+            <button onclick="reserveTicket('Renasce Vôlei Sorocaba vs. Time A')">Reservar Ingresso</button>
+        </div>
+        <div class="game">
+            <h3>Renasce Vôlei Sorocaba vs. Time B</h3>
+            <p>Data: 17 de Agosto, 2024</p>
+            <p>Local: Arena Sorocaba</p>
+            <button onclick="reserveTicket('Renasce Vôlei Sorocaba vs. Time B')">Reservar Ingresso</button>
+        </div>
+        <div class="game">
+            <h3>Renasce Vôlei Sorocaba vs. Time C</h3>
+            <p>Data: 24 de Agosto, 2024</p>
+            <p>Local: Arena Sorocaba</p>
+            <button onclick="reserveTicket('Renasce Vôlei Sorocaba vs. Time C')">Reservar Ingresso</button>
+        </div>
+    </div>
+    <script>
+        function reserveTicket(game) {
+            alert("Você reservou um ingresso para " + game);
+            // Aqui você pode adicionar lógica para salvar a reserva, por exemplo, enviando a informação para um servidor.
+        }
+    </script>
+</body>
+
+</html>

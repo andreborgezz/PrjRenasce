@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Renasce Vôlei Sorocaba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #f4dd31;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #000000;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            background-color: #f4dd31;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .cart-items {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        .cart-items h2 {
+            font-size: 1.5em;
+            margin: 0 0 20px 0;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item .details {
+            flex: 1;
+        }
+
+        .cart-item .details h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .cart-item .actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-item .actions button {
+            background-color: #00509e;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .cart-item .actions button:hover {
+            background-color: #003366;
+        }
+
+        .message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            margin-top: 20px;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Carrinho - Renasce Vôlei Sorocaba</h1>
+    </div>
+    <div class="nav">
+        <a href="index.html">Início</a>
+        <a href="calendario.html">Calendário</a>
+        <a href="ingressos.html">Ingressos</a>
+        <a href="clube.html">Clube</a>
+        <a href="loja.html">Loja</a>
+    </div>
+    <div class="content">
+        <div class="cart-items">
+            <h2>Itens no Carrinho</h2>
+            <div id="reservations"></div>
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+    <script>
+        function displayReservations() {
+            const reservations = JSON.parse(localStorage.getItem('reservations')) || [];
+            const reservationsContainer = document.getElementById('reservations');
+            reservationsContainer.innerHTML = ''; // Limpar o container antes de preencher
+
+            if (reservations.length === 0) {
+                reservationsContainer.innerHTML = "<p>Nenhum ingresso reservado.</p>";
+                return;
+            }
+
+            reservations.forEach(reservation => {
+                const reservationElement = document.createElement('div');
+                reservationElement.className = 'cart-item';
+                reservationElement.innerHTML = `
+                    <h3>${reservation}</h3>
+                    <div class="actions">
+                        <button onclick="removeItem('${reservation}')">Remover</button>
+                    </div>
+                `;
+                reservationsContainer.appendChild(reservationElement);
+            });
+        }
+
+        function removeItem(itemName) {
+            let reservations = JSON.parse(localStorage.getItem('reservations')) || [];
+            // Filtrar o item a ser removido
+            reservations = reservations.filter(item => item !== itemName);
+            localStorage.setItem('reservations', JSON.stringify(reservations));
+            displayReservations();
+            const messageElement = document.getElementById('message');
+            messageElement.style.display = 'block';
+            messageElement.textContent = itemName + ' foi removido do carrinho.';
+            // Ocultar a mensagem após alguns segundos
+            setTimeout(() => {
+                messageElement.style.display = 'none';
+            }, 3000);
+        }
+
+        // Exibir reservas ao carregar a página
+        displayReservations();
+    </script>
+</body>
+</html>

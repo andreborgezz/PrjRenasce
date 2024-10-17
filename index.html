@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Renasce Vôlei Sorocaba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #f4dd31;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #000;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            background-color: #f4dd31;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .main-content {
+            width: 65%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Estilos para o carrossel */
+        .carousel {
+            position: relative;
+            width: 100%;
+        }
+
+        .carousel-slide {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 80%;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        .carousel-slide img {
+            width: 110%;
+            height: auto;
+        }
+
+        .carousel-text {
+            padding: 40px;
+            background-color: white;
+        }
+        .carousel-text p.categoria {
+            font-size: 14px;
+            color: #f4dd31;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .carousel-text h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .carousel-text p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .carousel-text a {
+            display: block;
+            padding: 10px;
+            background-color: #f4dd31;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .carousel-text a:hover {
+            background-color: #e4c429;
+        }
+
+        /* Controles do carrossel abaixo da imagem */
+.carousel-controls {
+    position: relative;
+    top: 10px; /* Afasta da imagem */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 10px; /* Espaçamento entre os botões */
+}
+
+
+        /* Barra lateral */
+        .sidebar {
+            width: 30%;
+            padding-left: 20px;
+        }
+
+        .jogos {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .jogo {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .jogo h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .jogo p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .placar {
+            font-size: 24px;
+            color: #f4dd31;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Renasce Vôlei Sorocaba</h1>
+    </div>
+
+    <div class="nav">
+        <a href="index.html">Início</a>
+        <a href="calendario.html">Calendário</a>
+        <a href="ingressos.html">Ingressos</a>
+        <a href="clube.html">Clube</a>
+        <a href="loja.html">Loja</a>
+    </div>
+
+    <div class="content">
+        <!-- Conteúdo Principal -->
+        <div class="main-content">
+            <!-- Carrossel de Notícias -->
+            <div class="carousel">
+                <div class="carousel-slide active">
+                    <img src="https://th.bing.com/th/id/OIP.uohAa6XOtyGTT-bpLB5OzAHaE7?rs=1&pid=ImgDetMain" alt="Semifinais do Campeonato Paulista">
+                    <div class="carousel-text">
+                        <div class="carousel-controls">
+                    <button id="prev">❮</button>
+                    <button id="next">❯</button>
+                </div>
+                        <p class="categoria">Vôlei de Quadra</p>
+                        <h2>Semifinais do Campeonato Paulista de Vôlei Feminino começam nesta terça (1)</h2>
+                        <p>Foto: Felipe Valentim Custódio/Vôlei Renasce. Sesi Bauru e Renasce abrem a segunda fase.[…]</p>
+                        <a href="https://www2.fpv.com.br/semifinais-do-campeonato-paulista-de-volei-masculino-comecam-nesta-terca-1/">Saiba mais</a>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjblt4MgOomOjElFHWPuiBizM8IoOjWS7uE0xsmZffiBhZd0k1OE0y7nF5KiEDJbFZRj5j_-gsWMcQi7b4Bb_e-xRSb44_F2lb1vzUKoC08tVoT0UOKEwEEPHvvDPn6qW3s_AEm9ifQc4LaGVbenuQNFDskIB2iXzzJCHx86A3hHjvSH_3_Vth2b2TYJ6s/w1200-h630-p-k-no-nu/IMG_20240310_140215_534.jpg" alt="Partida decisiva">
+                    <div class="carousel-text">
+                        <p class="categoria">Vôlei de Quadra</p>
+                        <h2>Semifinais do Campeonato Paulista de Vôlei Masculino começam nesta terça (1)</h2>
+                        <p>Foto: Pedro Teixeira/Vôlei Renata. Sesi Bauru e Suzano Vôlei abrem a segunda fase. Na outra chave, Vôlei Renata enfrentará o […]</p>
+                        <a href="https://www2.fpv.com.br/semifinais-do-campeonato-paulista-de-volei-masculino-comecam-nesta-terca-1/">Saiba mais</a>
+                    </div>
+                </div>
+
+                
+            </div>
+            
+                
+        </div>
+                
+                
+        <!-- Barra lateral para jogos -->
+        <div class="sidebar">
+            <div class="jogos">
+                <div class="jogo">
+                    <h2>Último Jogo</h2>
+                    <p>Renasce Sorocaba vs São Caetano</p>
+                    <div class="placar">3 x 0</div>
+                    <p>25 x 15, 25 x 13, 25 x 10</p>
+                </div>
+
+                <div class="jogo">
+                    <h2>Próxima Partida</h2>
+                    <p>Renasce Sorocaba vs Suzano</p>
+                    <p>03/10/2024 - 20:00</p>
+                </div>
+
+                <div class="jogo">
+                    <h2>Próxima Partida</h2>
+                    <p>Renasce Sorocaba vs SESI Bauru</p>
+                    <p>07/10/2024 - 18:00</p>
+                </div>
+
+                <div class="jogo">
+                    <h2>Próxima Partida</h2>
+                    <p>Renasce Sorocaba vs Vôlei Renata</p>
+                    <p>10/10/2024 - 19:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Renasce Vôlei Sorocaba. Todos os direitos reservados.</p>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentSlide = 0;
+
+        document.getElementById('next').addEventListener('click', () => {
+            changeSlide(1);
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            changeSlide(-1);
+        });
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
